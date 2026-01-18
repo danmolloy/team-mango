@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Inter({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900']
 });
 
 const geistMono = Geist_Mono({
@@ -23,11 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-dark ">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${geistMono.variable} antialiased relative`}
       >
+        <Header />
+        
         {children}
+        <Footer />
+        <div className="-z-10  h-34 overflow-hidden text-center fixed bottom-0  w-full bg-black text-neutral-200 ">
+        <p className="text-[clamp(4rem,30vw,14rem)]  -mt-8 sm:-mt-32 font-light ">mango</p>
+      </div>
       </body>
     </html>
   );
