@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import {  Geist_Mono, Inter } from "next/font/google";
+import {  Climate_Crisis, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+
+const display = Climate_Crisis({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight:  ['400']
+})
 
 const poppins = Inter({
   variable: "--font-poppins",
@@ -28,14 +34,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-dark ">
       <body
-        className={`${poppins.variable} ${geistMono.variable} antialiased relative`}
+        className={`${poppins.variable} ${geistMono.variable} ${display.variable} antialiased relative`}
       >
         <Header />
         
         {children}
         <Footer />
-        <div className="-z-10  h-34 overflow-hidden text-center fixed bottom-0  w-full bg-black text-neutral-200 ">
-        <p className="text-[clamp(4rem,30vw,14rem)]  -mt-8 sm:-mt-32 font-light ">mango</p>
+        <div className="-z-10  h-34 overflow-hidden text-center fixed bottom-0  w-full bg-[#1D1D1D] text-[#F4F1E0] ">
+        <p className="text-[clamp(4rem,20vw,14rem)]   sm:-mt-12 lg:-mt-32 font-display ">mango</p>
       </div>
       </body>
     </html>

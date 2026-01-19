@@ -18,6 +18,7 @@
   --color-foreground: var(--foreground);
   --font-sans:   var(--font-poppins);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display), Arial, Helvetica, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

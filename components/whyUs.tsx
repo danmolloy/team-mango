@@ -36,14 +36,14 @@ const whyUsArr = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="p-4 pt-12 flex flex-col items-center min-h-[75vh] pb-16 ">
-      <h2 className="self-center font-medium text-6xl text-dark w-screen border-y border-y-neutral-200 text-center leading-12">WHY TEAM MANGO</h2>
+    <section id="why-us" className="p-4 pt-12 flex flex-col items-center min-h-[75vh] pb-16 bg-[#3077B5] text-[#F4F1E0]">
+      <h2 className="self-center font-semibold text-6xl text-center">WHY TEAM MANGO</h2>
       <ul className="flex flex-col items-center justify-center my-8">
         {whyUsArr.map((i, ind) => (
           <li key={ind} className={`flex flex-col lg:flex-row px-2 items-start lg:items-center h-48 py-2 justify-evenly  w-full  border-b ${ind === 0 && 'border-t'} border-neutral-300`}>
-            <p className="text-2xl text-primary">{i.icon}</p>
+            <p className="text-2xl ">{i.icon}</p>
             <p className="font-medium text-2xl lg:w-1/3">{i.title.toUpperCase()}</p>
-             <p className="text-sm font-base font-sans  lg:w-1/3">{i.text}</p>
+             <p className="text-md font-base font-sans  lg:w-1/3">{i.text}</p>
            </li>
         ))}
       </ul>
