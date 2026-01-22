@@ -37,7 +37,7 @@ const whyUsArr = [
 export default function WhyUs() {
   return (
     <section id="why-us" className="p-4 pt-12 flex flex-col items-center min-h-[75vh] pb-16 bg-light text-dark">
-      <h2 className="self-center font-bold text-6xl text-center tracking-[-4px]">WHY TEAM MANGO</h2>
+      <h2 className="self-center font-bold text-6xl text-center tracking-[-5px]">WHY TEAM MANGO</h2>
       <ul className="flex flex-col items-center justify-center my-8 ">
         {whyUsArr.map((i, ind) => (
           <li key={ind} className={`flex flex-col lg:flex-row px-2 items-start lg:items-center lg:min-h-40 py-4 justify-evenly  w-full  border-b-2 ${ind === 0 && 'border-t-2'} border-dark`}>

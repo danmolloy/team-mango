@@ -84,18 +84,18 @@ export default function SelectedWork() {
 
   return (
     <div className="flex flex-col min-h-screen bg-dark text-light py-8">
-            <h2 className="self-center z-10 font-semibold text-6xl tracking-[-4px]  text-center ">SELECTED WORK</h2>
+            <h2 className="self-center z-10 font-semibold text-6xl tracking-[-5px]  text-center ">SELECTED WORK</h2>
 
 
     <div className="flex flex-row flex-wrap justify-evenly w-screen lg:px-32">
       {
-        projectsArr.map(i => (
+        projectsArr.map((i, ind) => (
           <div key={i.id} className="flex flex-col sm:w-2/5 w-full m-8 h-auto overflow-hidden max-w-88">
             
-          <button onClick={() => {selected === i.id ? setSelected(null) : setSelected(i.id)}} className={`cursor-pointer    relative w-full   aspect-square border border-light rounded overflow-hidden bg-dark shadow`}>
-           {i.thumb && <Image className="absolute hover:scale-105 transition-all duration-500 ease-in-out" fill={true} src={i.thumb?.src} alt={i.thumb.imgAlt}/>}
+          <button onBlur={() => setSelected(null)} onClick={() => {selected === ind ? setSelected(null) : setSelected(ind)}} className={`cursor-pointer    relative w-full   aspect-square border border-light rounded-sm overflow-hidden bg-dark shadow`}>
+           {i.thumb && <Image className={`absolute hover:scale-105 transition-all duration-500 ease-in-out ${selected === ind && "scale-105"}`} fill={true} src={i.thumb?.src} alt={i.thumb.imgAlt}/>}
       </button>
-      <div className={`h-16 flex flex-col justify-center ${selected === i.id ? "opacity-100" : "opacity-0"} transition-all duration-500`}>
+      <div className={`h-16 flex flex-col justify-center ${selected === ind ? "opacity-100" : "opacity-0"} transition-all duration-500`}>
         <p className="font-bold">{i.title}</p>
         <a href={i.links.website} target="_blank" className="text-blue-400 hover:underline font-light">View site</a></div>
           </div>

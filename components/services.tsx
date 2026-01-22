@@ -39,7 +39,7 @@ export default function Services() {
 
   return ( 
     <section id="services" className="min-h-screen relative w-screen bg-dark text-light pt-12 p-4 flex flex-col pb-12 "> 
-      <h2 className="self-center font-bold text-6xl text-center tracking-[-4px]">SERVICES</h2> 
+      <h2 className="self-center font-bold text-6xl text-center tracking-[-5px]">SERVICES</h2> 
       <div className="flex flex-col relative lg:flex-row lg:items-center lg:justify-evenly mt-8">
 
 <ul className="flex flex-col md:flex-row flex-wrap justify-center ">

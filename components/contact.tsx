@@ -14,10 +14,10 @@ export default function Contact() {
   const sendingMsg = (<div><h2 className="">Message sending...</h2></div>)
 
   return (
-    <section id="contact" className=" pt-12 flex flex-col items-center justify-between p-2 py-8 text-sm text-[#1D1D1D] w-screen  mx-8 min-h-[80vh] bg-[#F4F1E0]">
+    <section id="contact" className=" pt-12 flex flex-col items-center justify-between p-2 py-8 text-sm text-dark w-screen  mx-8 min-h-[80vh] bg-light">
       <div className='text-center'>
 
-      <h1 className='self-center font-bold text-6xl  font-sans tracking-[-4px]'>CONTACT</h1>
+      <h1 className='self-center font-bold text-6xl  font-sans tracking-[-5px]'>CONTACT</h1>
       <p className='px-4 my-4 text-md font-semibold text-md '>{`We're always interested to hear about new projects, please feel free to get in touch.`}</p>
       </div>
             <div className=" w-full md:w-3/4">
@@ -106,7 +106,7 @@ export default function Contact() {
           </ErrorMessage>
           </div>
           </div>
-        <button disabled={props.isSubmitting || (sendStatus === "sending")} id="submit-button" type='submit' className=" disabled:opacity-30 hover:underline    bg-[#3077B5] text-[#F4F1E0]  m-2 p-1 px-2 rounded-xl self-end cursor-pointer text-md font-semibold">Submit</button>
+        <button disabled={props.isSubmitting || (sendStatus === "sending")} id="submit-button" type='submit' className=" disabled:opacity-30 hover:underline    bg-contrast text-light  m-2 p-1 px-2 rounded-xl self-end cursor-pointer text-md font-semibold">Submit</button>
         <div>
         {sendStatus === "sending" 
         ? sendingMsg
