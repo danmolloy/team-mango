@@ -6,11 +6,11 @@
 }
 
 @theme {
-  --color-primary: #066bbd;
-    --color-secondary: #124670;
-  
-  --color-light: rgba(247, 247, 247, 1);
-  --color-dark: #000000;
+  --color-primary: #EB5027;
+    --color-secondary: #F6CD45;
+  --color-contrast: #3077B5;
+  --color-light: #F4F1E0;
+  --color-dark: #1D1D1D;
 }
 
 @theme inline {

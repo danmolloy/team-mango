@@ -14,11 +14,11 @@ export default function Contact() {
   const sendingMsg = (<div><h2 className="">Message sending...</h2></div>)
 
   return (
-    <section id="contact" className=" pt-12 flex flex-col items-center justify-between p-2 py-8 text-sm text-[#EB5027] w-screen  mx-8 min-h-[80vh] bg-[#F4F1E0]">
+    <section id="contact" className=" pt-12 flex flex-col items-center justify-between p-2 py-8 text-sm text-[#1D1D1D] w-screen  mx-8 min-h-[80vh] bg-[#F4F1E0]">
       <div className='text-center'>
 
-      <h1 className='self-center font-semibold text-6xl  font-sans'>CONTACT</h1>
-      <p className='px-4 my-4 text-md font-semibold '>{`We're always interested to hear about new projects, please feel free to get in touch.`}</p>
+      <h1 className='self-center font-bold text-6xl  font-sans tracking-[-4px]'>CONTACT</h1>
+      <p className='px-4 my-4 text-md font-semibold text-md '>{`We're always interested to hear about new projects, please feel free to get in touch.`}</p>
       </div>
             <div className=" w-full md:w-3/4">
     <Formik    
@@ -62,10 +62,10 @@ export default function Contact() {
       <Form data-testid="contact-form" className="  flex flex-col  self-center w-full  ">
 
           <div className="flex flex-col m-2">
-          <label htmlFor='name-input' className="form-label  text-md font-semibold">Name</label>
+          <label htmlFor='name-input' className="form-label  text-md font-medium">Name</label>
           <Field 
             id="name-input" 
-            className=" text-[#EB5027] border-2 rounded-xl    w-full p-1 "
+            className=" text-dark border rounded-xl    w-full p-1 "
             type="text"
             name="name"/>
             <div className="h-6">
@@ -75,10 +75,10 @@ export default function Contact() {
           </div>
           </div>
           <div className="flex flex-col m-2">
-          <label htmlFor='email' className="form-label   text-md font-semibold">Email</label>
+          <label htmlFor='email' className="form-label   text-md font-medium">Email</label>
           <Field
             id="email" 
-            className="text-[#EB5027] border-2 border-[#EB5027] rounded-xl w-full p-1 " 
+            className="text-dark border border-dark rounded-xl w-full p-1 " 
             type="email"
             name="email"/>
             <div className="h-6">
@@ -88,14 +88,14 @@ export default function Contact() {
           </div>
           </div>
           <div className="flex flex-col m-2 mb-0">
-          <label htmlFor='msg-text' className="form-label   text-md font-semibold">Message</label>
+          <label htmlFor='msg-text' className="form-label   text-md font-medium">Message</label>
           <Field 
           multiline="6"
           maxLength="500"
           rows="4"
           component="textarea"
             id="msg-text" 
-            className=" text-[#EB5027] border-2 border-[#EB5027]  rounded-xl w-full p-1 "
+            className=" text-dark border border-dark  rounded-xl w-full p-1 "
             type="textarea"
             name="message"/>
             <div className="h-6">

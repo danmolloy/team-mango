@@ -38,15 +38,15 @@ const servicesArr = [
 export default function Services() { 
 
   return ( 
-    <section id="services" className="min-h-screen relative w-screen bg-[#F6CD45] text-[#1D1D1D] pt-12 p-4 flex flex-col pb-12 "> 
-      <h2 className="self-center font-semibold text-6xl   text-center ">SERVICES</h2> 
+    <section id="services" className="min-h-screen relative w-screen bg-dark text-light pt-12 p-4 flex flex-col pb-12 "> 
+      <h2 className="self-center font-bold text-6xl text-center tracking-[-4px]">SERVICES</h2> 
       <div className="flex flex-col relative lg:flex-row lg:items-center lg:justify-evenly mt-8">
 
 <ul className="flex flex-col md:flex-row flex-wrap justify-center ">
       {servicesArr.map((i, ind) => ( 
-        <li key={ind} className="bg-[#F4F1E0] text-[#1D1D1D] md:w-2/5 md:min-h-[20vh] p-4 m-2 rounded-lg border-3 shadow">
+        <li key={ind} className="bg-light text-dark md:w-2/5 md:min-h-[20vh] p-4 m-2 rounded-lg border-3 shadow">
           <div className="flex flex-col  ">
-          <p className="text-2xl ">{i.icon}</p>
+          <p className="text-2xl text-primary">{i.icon}</p>
 
           <h3 className="font-medium text-xl py-2">{i.title.toUpperCase()}</h3>
           </div>
