@@ -83,7 +83,7 @@ export default function SelectedWork() {
 
 
   return (
-    <div className="flex flex-col min-h-screen bg-dark text-light py-8">
+    <div id='work' className="flex pt-12 flex-col min-h-screen bg-dark text-light py-8">
             <h2 className="self-center z-10 font-semibold text-6xl tracking-[-5px]  text-center ">SELECTED WORK</h2>
 
 
@@ -92,7 +92,9 @@ export default function SelectedWork() {
         projectsArr.map((i, ind) => (
           <div key={i.id} className="flex flex-col sm:w-2/5 w-full m-8 h-auto overflow-hidden max-w-88">
             
-          <button onBlur={() => setSelected(null)} onClick={() => {selected === ind ? setSelected(null) : setSelected(ind)}} className={`cursor-pointer    relative w-full   aspect-square border border-light rounded-sm overflow-hidden bg-dark shadow`}>
+          <button onClick={() => {
+    setSelected(selected === ind ? null : ind)
+  }} className={`cursor-pointer    relative w-full   aspect-square border border-light rounded-sm overflow-hidden bg-dark shadow`}>
            {i.thumb && <Image className={`absolute hover:scale-105 transition-all duration-500 ease-in-out ${selected === ind && "scale-105"}`} fill={true} src={i.thumb?.src} alt={i.thumb.imgAlt}/>}
       </button>
       <div className={`h-16 flex flex-col justify-center ${selected === ind ? "opacity-100" : "opacity-0"} transition-all duration-500`}>
