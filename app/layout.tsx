@@ -40,7 +40,7 @@ export default function RootLayout({
         
         {children}
         <Footer />
-        <div className="-z-10  h-34 overflow-hidden text-center fixed bottom-0  w-full bg-dark text-secondary ">
+        <div className="-z-10  h-34 overflow-hidden text-center fixed bottom-0  w-full bg-dark text-light ">
         <p className="text-[clamp(4rem,20vw,14rem)]   sm:-mt-12 lg:-mt-32 font-display ">mango</p>
       </div>
       </body>

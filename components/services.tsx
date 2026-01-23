@@ -13,14 +13,14 @@ const servicesArr = [
     text: "Team Mango designs and builds bespoke systems tailored to the needs of each organisation.",
     icon: <LuPuzzle />
   },
-  {
+/*   {
     title: "Web apps & internal systems",
     text: "We build web-based systems that replace fragile spreadsheets, manual processes or inherited tools.",
     icon: <LuLayoutDashboard />
-  },
+  }, */
   {
     title: "Web Development",
-    text: "We design, build and maintain websites for individual and organisations, including marketing sites and online stores. Projects focus on design, clarity and performance.",
+    text: "We design, build and maintain websites for individual and organisations, including marketing sites and online stores. Projects focus on performance, user experience and interface design.",
     icon: <LuGlobe />
   },
   {

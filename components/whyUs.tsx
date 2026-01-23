@@ -4,7 +4,7 @@ import { LuLayoutDashboard,  LuShieldCheck, LuUserCheck, LuLock } from "react-ic
 const whyUsArr = [
   {
     title: "Clear, intuitive systems",
-    text: "We design software that feels understandable and considered. Interfaces are shaped around real workflows, not abstract feature lists.",
+    text: "Interfaces are shaped around real workflows and designed to feel understandable from the outset.",
     icon: <LuLayoutDashboard />,
   },
 /*   {
@@ -14,12 +14,12 @@ const whyUsArr = [
   }, */
   {
     title: "Reliability and longevity",
-    text: "Our focus is on systems that continue to work well after launch. Software is built in manageable stages, delivered with clear documentation, and designed to be maintained over time.",
+    text: "Our focus is on systems you can rely on — built carefully, delivered in stages, and designed to continue working well over time.",
     icon: <LuShieldCheck />
   },
   {
     title: "Direct support",
-    text: "Being intentionally small means you work directly with the person designing and building your system. Support is personal, responsive, and informed by a deep understanding of the work.",
+    text: "You work directly with the person designing and building your system. Support is personal, responsive, and informed by a deep understanding of the work.",
     icon: <LuUserCheck />
   },
  /*  {
@@ -29,7 +29,7 @@ const whyUsArr = [
   }, */
   {
     title: "Security and care",
-    text: "We take security and data protection seriously, building systems with sensible safeguards and attention to detail from the outset.",
+    text: "We take security and data protection seriously, building robust systems with sensible safeguards and attention to detail from the outset.",
     icon: <LuLock />
   }
 ]
