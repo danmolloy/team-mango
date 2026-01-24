@@ -8,13 +8,13 @@ export default function Menu(props: {
   const { closeMenu } = props
 
   return (
-    <div className="flex flex-col justify-evenly w-screen h-screen text-xl text-center bg-dark fixed top-12 right-0 text-light">
-                <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#services" className="hover:underline mx-1 p-2 py-4 ">SERVICES</Link>
-        <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#why-us" className="hover:underline mx-1 p-2 py-4 ">WHY MANGO</Link>
-        <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#about" className="hover:underline mx-1 p-2 py-4 ">ABOUT</Link>
-        <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#work" className="hover:underline mx-1 p-2 py-4 ">SELECTED WORK</Link>
+    <div className="flex flex-col justify-evenly w-screen h-screen text-xl text-center bg-dark fixed top-12 right-0 text-light pb-20">
+                <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#services" className="hover:underline mx-1 p-2 tracking-[-2px] font-medium">SERVICES</Link>
+        <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#why-us" className="hover:underline mx-1 p-2 tracking-[-2px] font-medium">WHY MANGO</Link>
+        <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#about" className="hover:underline mx-1 p-2 tracking-[-2px] font-medium">ABOUT</Link>
+        <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#work" className="hover:underline mx-1 p-2 tracking-[-2px] font-medium">SELECTED WORK</Link>
 
-        <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#contact" className="hover:underline mx-1 p-2 py-4 ">CONTACT</Link>
+        <Link onClick={() => setTimeout(() => closeMenu(), 250)} href="/#contact" className="hover:underline mx-1 p-2 tracking-[-2px] font-medium">CONTACT</Link>
     </div>
   )
 }
