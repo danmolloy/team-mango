@@ -90,16 +90,12 @@ export default function SelectedWork() {
     <div className="flex flex-row flex-wrap justify-evenly w-screen lg:px-32">
       {
         projectsArr.map((i, ind) => (
-          <div key={i.id} className="flex flex-col sm:w-2/5 w-full m-8 h-auto overflow-hidden max-w-88">
+          <div key={i.id} className="flex hover:underline text-light flex-col sm:w-2/5 w-full m-8 h-auto overflow-hidden max-w-88">
             
-          <button onClick={() => {
-    setSelected(selected === ind ? null : ind)
-  }} className={`cursor-pointer    relative w-full   aspect-square border border-light rounded-sm overflow-hidden bg-dark shadow`}>
-           {i.thumb && <Image className={`absolute hover:scale-105 transition-all duration-500 ease-in-out ${selected === ind && "scale-105"}`} fill={true} src={i.thumb?.src} alt={i.thumb.imgAlt}/>}
-      </button>
-      <div className={`h-16 flex flex-col justify-center ${selected === ind ? "opacity-100" : "opacity-0"} transition-all duration-500`}>
-        <p className="font-bold">{i.title}</p>
-        <a href={i.links.website} target="_blank" className="text-blue-400 hover:underline font-light">View site</a></div>
+          <div className={`cursor-pointer    relative w-full   aspect-square border border-light rounded-sm overflow-hidden bg-dark shadow`}>
+           {i.thumb && <Image className={`absolute  transition-all duration-500 ease-in-out hover:scale-105`} fill={true} src={i.thumb?.src} alt={i.thumb.imgAlt}/>}
+      </div>
+        <p className="font-medium text-lg tracking-[-1.5px] text-center">{i.title.toUpperCase()}</p>
           </div>
 
         ))
