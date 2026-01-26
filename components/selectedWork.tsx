@@ -5,6 +5,7 @@ import { useState } from "react"
 export const projectsArr: {
   id: number
   title: string
+  blurb: string
   thumb: {
     src: string
       imgWidth: string
@@ -19,6 +20,7 @@ export const projectsArr: {
   {
     id: 4,
     title: "Jam Jar",
+    blurb: "Subscription-based SaaS Product",
     thumb: {
       src: "/thumbs/background.png",
       imgWidth: '650',
@@ -40,6 +42,7 @@ export const projectsArr: {
     },
     id: 0,
     title: "Fiona Kelly",
+    blurb: "Musician Website",
     links: {
       website: "https://www.fionakellyflute.com/",
     },
@@ -49,6 +52,7 @@ export const projectsArr: {
 
     id: 1,
     title: "The Big Firkin Band",
+    blurb: "Band Website",
     thumb: {
       src: "/thumbs/firkin-thumb.png",
       imgWidth: '600',
@@ -63,7 +67,8 @@ export const projectsArr: {
   
   {
       id: 3,
-      title: "Tuner",
+      title: "Chromatic Tuner",
+      blurb: "Mobile App",
       links: {
         website: "https://apps.apple.com/gb/app/tuner/id6746412805",
       },
@@ -90,13 +95,15 @@ export default function SelectedWork() {
     <div className="flex flex-row flex-wrap justify-evenly w-screen lg:px-32">
       {
         projectsArr.map((i, ind) => (
-          <div key={i.id} className="flex hover:underline text-light flex-col sm:w-2/5 w-full m-8 h-auto overflow-hidden max-w-88">
+          <a href={i.links.website} target="_blank" key={ind} className="flex hover:underline text-light flex-col sm:w-2/5 w-full m-8 h-auto overflow-hidden max-w-88">
             
           <div className={`cursor-pointer    relative w-full   aspect-square border border-light rounded-sm overflow-hidden bg-dark shadow`}>
            {i.thumb && <Image className={`absolute  transition-all duration-500 ease-in-out hover:scale-105`} fill={true} src={i.thumb?.src} alt={i.thumb.imgAlt}/>}
       </div>
-        <p className="font-medium text-lg tracking-[-1.5px] text-center">{i.title.toUpperCase()}</p>
-          </div>
+        <p className="font-medium text-lg tracking-[0px] text-center">{i.title.toUpperCase()}</p>
+                <p className="font-light text-lg -mt-2 tracking-[-1px] text-center">{i.blurb.toUpperCase()}</p>
+
+          </a>
 
         ))
       }

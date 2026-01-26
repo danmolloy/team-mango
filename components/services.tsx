@@ -50,7 +50,7 @@ export default function Services() {
 
           <h3 className="font-medium text-xl py-2">{i.title.toUpperCase()}</h3>
           </div>
-          <p className=" font-medium">{i.text}</p>
+          <p className=" font-mediu tracking-tighter">{i.text}</p>
       </li> 
     ))} 
     </ul> 

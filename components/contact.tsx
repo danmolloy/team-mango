@@ -18,7 +18,7 @@ export default function Contact() {
       <div className='text-center'>
 
       <h1 className='self-center font-bold text-6xl  font-sans tracking-[-5px]'>CONTACT</h1>
-      <p className='px-4 my-4 text-md font-semibold text-md '>{`We're always interested to hear about new projects, please feel free to get in touch.`}</p>
+      <p className='px-4 my-4 text-lg font-medium tracking-tighter text-md '>{`We're always interested to hear about new projects, please feel free to get in touch.`}</p>
       </div>
             <div className=" w-full md:w-3/4">
     <Formik    
