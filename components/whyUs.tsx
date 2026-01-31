@@ -1,6 +1,6 @@
-
+'use client'
 import { LuLayoutDashboard,  LuShieldCheck, LuUserCheck, LuLock } from "react-icons/lu";
-
+import { motion } from 'motion/react'
 const whyUsArr = [
   {
     title: "Clear, intuitive systems",
@@ -33,21 +33,61 @@ const whyUsArr = [
     icon: <LuLock />
   }
 ]
-
 export default function WhyUs() {
   return (
-    <section id="why-us" className="p-4 pt-12 flex flex-col items-center min-h-[75vh] pb-16 bg-light text-dark w-screen">
-      <h2 className="self-center font-bold text-6xl text-center tracking-[-5px]">WHY TEAM MANGO</h2>
-      <ul className="flex flex-col items-center justify-center my-8 ">
+    <section
+      id="why-us"
+      className="p-4 pt-12 flex flex-col items-center min-h-[75vh] pb-16 bg-light text-dark w-screen"
+    >
+      <h2 className="self-center font-bold text-6xl text-center tracking-[-5px]">
+        WHY TEAM MANGO
+      </h2>
+
+      <ul className="flex flex-col items-center justify-center my-8 w-full">
         {whyUsArr.map((i, ind) => (
-          <li key={ind} className={`flex flex-col lg:flex-row px-2 items-start lg:items-center lg:min-h-40 py-4 justify-evenly  w-full  border-b-2 ${ind === 0 && 'border-t-2'} border-dark`}>
+          <motion.li
+            key={ind}
+            className="relative flex flex-col lg:flex-row px-2 items-start lg:items-center lg:min-h-40 py-4 justify-evenly w-full"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            {/* Top border (only first item) */}
+            {ind === 0 && (
+              <motion.div
+                className="absolute top-0 left-0 h-[2px] w-full bg-dark origin-left"
+                variants={{
+                  hidden: { scaleX: 0 },
+                  visible: { scaleX: 1 }
+                }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              />
+            )}
+
+            {/* Bottom border */}
+            <motion.div
+              className="absolute bottom-0 left-0 h-[2px] w-full bg-dark origin-left"
+              variants={{
+                hidden: { scaleX: 0 },
+                visible: { scaleX: 1 }
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+                delay: ind * 0.08 // subtle stagger
+              }}
+            />
+
             <p className="text-2xl text-contrast">{i.icon}</p>
-            <p className="font-medium text-2xl lg:w-1/3 py-2">{i.title.toUpperCase()}</p>
-             <p className="text-md font-base tracking-tighter font-sans  lg:w-1/3">{i.text}</p>
-           </li>
+            <p className="font-medium text-2xl lg:w-1/3 py-2">
+              {i.title.toUpperCase()}
+            </p>
+            <p className="text-md font-base tracking-tighter font-sans lg:w-1/3">
+              {i.text}
+            </p>
+          </motion.li>
         ))}
       </ul>
-{/*       <p className="text-center">We take on a small number of projects at a time to ensure each receives proper attention and care.</p>
- */}    </section>
-  )
+    </section>
+  );
 }

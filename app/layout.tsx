@@ -3,6 +3,9 @@ import {  Climate_Crisis, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import FooterBranding from "@/components/footerBranding";
+import FooterBrandingMob from "@/components/footerBrandingMob";
+import FooterBrandingLG from "@/components/footerBrandingLg";
 
 const display = Climate_Crisis({
   variable: "--font-display",
@@ -40,9 +43,9 @@ export default function RootLayout({
         
         {children}
         <Footer />
-        <div className="-z-10  h-34 overflow-hidden text-center fixed bottom-0  w-full bg-dark text-light ">
-        <p className="text-[clamp(4rem,20vw,14rem)]   sm:-mt-12 lg:-mt-32 font-display ">mango</p>
-      </div>
+        <FooterBrandingMob />
+        <FooterBranding />
+        <FooterBrandingLG />
       </body>
     </html>
   );
