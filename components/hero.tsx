@@ -14,12 +14,12 @@ export default function Hero() {
 
   const headingColor = useTransform(
     scrollY,
-    [100, 275],
+    [100, 200],
     ['#f95700', '#FFF9ED']
   )
   const blurbColor = useTransform(
     scrollY,
-    [175, 375],
+    [175, 300],
     ['#1e1e1e', '#FFF9ED']
   )
   return (
