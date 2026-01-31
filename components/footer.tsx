@@ -3,10 +3,9 @@ import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 
 export default function Footer() {
-  const ref = useRef<HTMLDivElement>(null)
+  const triggerRef = useRef<HTMLDivElement>(null)
 
-  const isInView = useInView(ref, {
-    margin: '-20% 0px',
+  const isInView = useInView(triggerRef, {
     once: true
   })
 
@@ -19,16 +18,16 @@ export default function Footer() {
         <p>Meanjin/Brisbane, Australia</p>
       </div>
 
+      {/* Sentinel trigger — normal flow */}
+      <div ref={triggerRef} className="h-1 w-full" />
+
       {/* Branding reveal */}
-      <div
-        ref={ref}
-        className="relative overflow-hidden h-20 sm:h-28  lg:h-32 w-full"
-      >
+      <div className="relative overflow-hidden h-32 sm:h-40 lg:h-48 w-full">
         <motion.p
           initial={{ y: 120, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : {}}
           transition={{
-            duration: 1.5,
+            duration: 1.2,
             ease: [0.22, 1, 0.36, 1]
           }}
           className="absolute inset-x-0 bottom-0 text-center text-[clamp(4rem,20vw,14rem)] font-display leading-none"

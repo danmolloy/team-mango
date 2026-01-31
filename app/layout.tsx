@@ -42,10 +42,7 @@ export default function RootLayout({
         <Header />
         
         {children}
-        <Footer />{/* 
-        <FooterBrandingMob />
-        <FooterBranding />
-        <FooterBrandingLG /> */}
+        <Footer />
       </body>
     </html>
   );
